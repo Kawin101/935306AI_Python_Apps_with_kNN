@@ -20,7 +20,6 @@ Label(bg="black").pack()
 frame = Frame(root,bd=3, height=10, width=10, relief=RIDGE, cursor="hand1" , highlightthickness=0)
 frame.pack()
 
-#row=0
 Label(frame,text=" K ",bg = "white",font=('arial', 20, 'bold')).grid(row=0,column=0)
 Label(frame,text="").grid(row=0,column=1)
 Label(frame,text=" Height ",bg = "white",font=('arial', 20,'bold')).grid(row=0,column=2)
@@ -29,23 +28,25 @@ Label(frame,text=" Weight ",bg = "white",font=('arial', 20,'bold')).grid(row=0,c
 Label(frame,text="").grid(row=0,column=5)
 Label(frame,text=" Size ",bg = "white",font=('arial', 20,'bold')).grid(row=0,column=6)
 Label(frame,text="").grid(row=0,column=7)
-Label(frame,text=" Sex ",bg = "white",font=('arial', 20,'bold')).grid(row=0,column=8)
+Label(frame,text=" Age ",bg = "white",font=('arial', 20,'bold')).grid(row=0,column=8)
 Label(frame,text="").grid(row=0,column=9)
+Label(frame,text=" Sex ",bg = "white",font=('arial', 20,'bold')).grid(row=0,column=10)
+Label(frame,text="").grid(row=0,column=11)
 
 
 #row=1
-Label(frame,text="1",font=('arial', 20)).grid(row=1,column=0)
+Label(frame,text="1").grid(row=1,column=0)
 Label(frame,text="").grid(row=1,column=1)
 Label(frame,text="120",font=('arial', 20)).grid(row=1,column=2)
 Label(frame,text="").grid(row=1,column=3)
 Label(frame,text="40",font=('arial', 20)).grid(row=1,column=4)
-Label(frame,text="").grid(row=1,column=8)
+Label(frame,text="").grid(row=1,column=5)
 Label(frame,text="39",font=('arial', 20)).grid(row=1,column=6)
 Label(frame,text="").grid(row=1,column=7)
-Label(frame,text="Women",font=('arial', 20)).grid(row=1,column=8)
+Label(frame,text="25",font=('arial', 20)).grid(row=1,column=8)
 Label(frame,text="").grid(row=1,column=9)
-
-
+Label(frame,text="Women",font=('arial', 20)).grid(row=1,column=10)
+Label(frame,text="").grid(row=1,column=11)
 #row=2
 Label(frame,text="2",font=('arial', 20)).grid(row=2,column=0)
 Label(frame,text="").grid(row=2,column=1)
@@ -55,10 +56,10 @@ Label(frame,text="50",font=('arial', 20)).grid(row=2,column=4)
 Label(frame,text="").grid(row=2,column=5)
 Label(frame,text="40",font=('arial', 20)).grid(row=2,column=6)
 Label(frame,text="").grid(row=2,column=7)
-Label(frame,text="Women",font=('arial', 20)).grid(row=2,column=8)
+Label(frame,text="30",font=('arial', 20)).grid(row=2,column=8)
 Label(frame,text="").grid(row=2,column=9)
-
-
+Label(frame,text="Women",font=('arial', 20)).grid(row=2,column=10)
+Label(frame,text="").grid(row=2,column=11)
 #row=3
 Label(frame,text="3",font=('arial', 20)).grid(row=3,column=0)
 Label(frame,text="").grid(row=3,column=1)
@@ -68,10 +69,10 @@ Label(frame,text="60",font=('arial', 20)).grid(row=3,column=4)
 Label(frame,text="").grid(row=3,column=5)
 Label(frame,text="41",font=('arial', 20)).grid(row=3,column=6)
 Label(frame,text="").grid(row=3,column=7)
-Label(frame,text="Women",font=('arial', 20)).grid(row=3,column=8)
+Label(frame,text="35",font=('arial', 20)).grid(row=3,column=8)
 Label(frame,text="").grid(row=3,column=9)
-
-
+Label(frame,text="Women",font=('arial', 20)).grid(row=3,column=10)
+Label(frame,text="").grid(row=3,column=11)
 #row=4
 Label(frame,text="4",font=('arial', 20)).grid(row=4,column=0)
 Label(frame,text="").grid(row=4,column=1)
@@ -81,10 +82,10 @@ Label(frame,text="70",font=('arial', 20)).grid(row=4,column=4)
 Label(frame,text="").grid(row=4,column=5)
 Label(frame,text="42",font=('arial', 20)).grid(row=4,column=6)
 Label(frame,text="").grid(row=4,column=7)
-Label(frame,text="Women",font=('arial', 20)).grid(row=4,column=8)
+Label(frame,text="40",font=('arial', 20)).grid(row=4,column=8)
 Label(frame,text="").grid(row=4,column=9)
-
-
+Label(frame,text="Women",font=('arial', 20)).grid(row=4,column=10)
+Label(frame,text="").grid(row=4,column=11)
 #row=5
 Label(frame,text="5",font=('arial', 20)).grid(row=5,column=0)
 Label(frame,text="").grid(row=5,column=1)
@@ -94,10 +95,10 @@ Label(frame,text="80",font=('arial', 20)).grid(row=5,column=4)
 Label(frame,text="").grid(row=5,column=5)
 Label(frame,text="43",font=('arial', 20)).grid(row=5,column=6)
 Label(frame,text="").grid(row=5,column=7)
-Label(frame,text="Women",font=('arial', 20)).grid(row=5,column=8)
+Label(frame,text="45",font=('arial', 20)).grid(row=5,column=8)
 Label(frame,text="").grid(row=5,column=9)
-
-
+Label(frame,text="Women",font=('arial', 20)).grid(row=5,column=10)
+Label(frame,text="").grid(row=5,column=11)
 #row=6
 Label(frame,text="6",font=('arial', 20)).grid(row=6,column=0)
 Label(frame,text="").grid(row=6,column=1)
@@ -107,10 +108,10 @@ Label(frame,text="90",font=('arial', 20)).grid(row=6,column=4)
 Label(frame,text="").grid(row=6,column=5)
 Label(frame,text="44",font=('arial', 20)).grid(row=6,column=6)
 Label(frame,text="").grid(row=6,column=7)
-Label(frame,text="Man",font=('arial', 20)).grid(row=6,column=8)
+Label(frame,text="50",font=('arial', 20)).grid(row=6,column=8)
 Label(frame,text="").grid(row=6,column=9)
-
-
+Label(frame,text="Man",font=('arial', 20)).grid(row=6,column=10)
+Label(frame,text="").grid(row=6,column=11)
 #row=7
 Label(frame,text="7",font=('arial', 20)).grid(row=7,column=0)
 Label(frame,text="").grid(row=7,column=1)
@@ -120,9 +121,10 @@ Label(frame,text="100",font=('arial', 20)).grid(row=7,column=4)
 Label(frame,text="").grid(row=7,column=5)
 Label(frame,text="45",font=('arial', 20)).grid(row=7,column=6)
 Label(frame,text="").grid(row=7,column=7)
-Label(frame,text="Man",font=('arial', 20)).grid(row=7,column=8)
+Label(frame,text="55",font=('arial', 20)).grid(row=7,column=8)
 Label(frame,text="").grid(row=7,column=9)
-
+Label(frame,text="Man",font=('arial', 20)).grid(row=7,column=10)
+Label(frame,text="").grid(row=7,column=11)
 #row=8
 Label(frame,text="8",font=('arial', 20)).grid(row=8,column=0)
 Label(frame,text="").grid(row=8,column=1)
@@ -132,9 +134,10 @@ Label(frame,text="110",font=('arial', 20)).grid(row=8,column=4)
 Label(frame,text="").grid(row=8,column=5)
 Label(frame,text="46",font=('arial', 20)).grid(row=8,column=6)
 Label(frame,text="").grid(row=8,column=7)
-Label(frame,text="Man",font=('arial', 20)).grid(row=8,column=8)
+Label(frame,text="60",font=('arial', 20)).grid(row=8,column=8)
 Label(frame,text="").grid(row=8,column=9)
-
+Label(frame,text="Man",font=('arial', 20)).grid(row=8,column=10)
+Label(frame,text="").grid(row=8,column=11)
 #row=9
 Label(frame,text="9",font=('arial', 20)).grid(row=9,column=0)
 Label(frame,text="").grid(row=9,column=1)
@@ -144,10 +147,10 @@ Label(frame,text="120",font=('arial', 20)).grid(row=9,column=4)
 Label(frame,text="").grid(row=9,column=5)
 Label(frame,text="47",font=('arial', 20)).grid(row=9,column=6)
 Label(frame,text="").grid(row=9,column=7)
-Label(frame,text="Man",font=('arial', 20)).grid(row=9,column=8)
+Label(frame,text="65",font=('arial', 20)).grid(row=9,column=8)
 Label(frame,text="").grid(row=9,column=9)
-
-
+Label(frame,text="Man",font=('arial', 20)).grid(row=9,column=10)
+Label(frame,text="").grid(row=9,column=11)
 #row=10
 Label(frame,text="10",font=('arial', 20)).grid(row=10,column=0)
 Label(frame,text="").grid(row=10,column=1)
@@ -157,8 +160,10 @@ Label(frame,text="130",font=('arial', 20)).grid(row=10,column=4)
 Label(frame,text="").grid(row=10,column=5)
 Label(frame,text="48",font=('arial', 20)).grid(row=10,column=6)
 Label(frame,text="").grid(row=10,column=7)
-Label(frame,text="Man",font=('arial', 20)).grid(row=10,column=8)
-Label(frame,text="").grid(row=6,column=10)
+Label(frame,text="70",font=('arial', 20)).grid(row=10,column=8)
+Label(frame,text="").grid(row=10,column=9)
+Label(frame,text="Man",font=('arial', 20)).grid(row=10,column=10)
+Label(frame,text="").grid(row=10,column=11)
 
 frame2 = Frame(root,bd=3, height=10, width=10, relief=RIDGE, cursor="hand1" , highlightthickness=1)
 frame2.pack()
