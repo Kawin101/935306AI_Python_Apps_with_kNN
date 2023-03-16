@@ -4,6 +4,6 @@
 ## Guide
  > * Downlad https://www.python.org/downloads/release/python-31010/
  > * Open "Command Prompt: CMD"
- Run `pip3 install scikit-learn`, 
- Run `pip3 install pandas` and
- Run `pip3 install tk`
+ > * Run `pip3 install scikit-learn`
+ > * Run `pip3 install pandas`
+ > * Run `pip3 install tk`
