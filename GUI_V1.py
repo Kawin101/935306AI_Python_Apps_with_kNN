@@ -1,4 +1,12 @@
-from tkinter import * ;
+# tkinter GUI
+from tkinter import *
+from sklearn.datasets import clear_data_home ;
+
+# import library for kNN Function
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report, confusion_matrix
+import pandas as pd
 
 root =Tk()
 #ชื่อแอป
@@ -152,8 +160,6 @@ Label(frame,text="").grid(row=10,column=7)
 Label(frame,text="Man",font=('arial', 20)).grid(row=10,column=8)
 Label(frame,text="").grid(row=6,column=10)
 
-
-
 frame2 = Frame(root,bd=3, height=10, width=10, relief=RIDGE, cursor="hand1" , highlightthickness=1)
 frame2.pack()
 
@@ -168,48 +174,104 @@ Label(frame2,text="").grid(row=0,column=4)
 Label(frame2,text=" Size ",bg = "white",font=('arial', 20, 'bold')).grid(row=0,column=5)
 
 Label(frame2,text="").grid(row=0,column=6)
-Label(frame2,text=" Sex ",bg = "white",font=('arial', 20, 'bold')).grid(row=0,column=7)
+Label(frame2,text=" Age ",bg = "white",font=('arial', 20, 'bold')).grid(row=0,column=7)
+
+Label(frame2,text="").grid(row=0,column=8)
+Label(frame2,text=" Sex ",bg = "white",font=('arial', 20, 'bold')).grid(row=0,column=9)
 
 
-#row=1
-txt = IntVar()
+ #row=1
+Neighbors_input = IntVar(value=5)
 #txt = StringVar()
-mytxt = Entry(frame2,textvariable=txt,font=('arial', 20))
-mytxt.grid(row=1,column=0)
+Neighbors_Entry = Entry(frame2,textvariable=Neighbors_input,font=('arial', 15))
+Neighbors_Entry.grid(row=1,column=0)
 
-txt01 = IntVar()
+Height_input = IntVar(value=175)
 #txt01 = StringVar()
-mytxt01 = Entry(frame2,textvariable=txt01,font=('arial', 20))
-mytxt01.grid(row=1,column=1)
+Height_Entry = Entry(frame2,textvariable=Height_input,font=('arial', 15))
+Height_Entry.grid(row=1,column=1)
 
-txt02 = IntVar()
+Weight_input = IntVar(value=75)
 #txt02 = StringVar()
-mytxt02 = Entry(frame2,textvariable=txt02,font=('arial', 20))
-mytxt02.grid(row=1,column=3)
+Weight_Entry = Entry(frame2,textvariable=Weight_input,font=('arial', 15))
+Weight_Entry.grid(row=1,column=3)
 
-txt03 = IntVar()
-mytxt03 = Entry(frame2,textvariable=txt03,font=('arial', 20))
-mytxt03.grid(row=1,column=5)
+Size_input = IntVar(value=44)
+Size_Entry = Entry(frame2,textvariable=Size_input,font=('arial', 15))
+Size_Entry.grid(row=1,column=5)
+
+Age_input = IntVar(value=28)
+Age_Entry = Entry(frame2,textvariable=Age_input,font=('arial', 15))
+Age_Entry.grid(row=1,column=7)
 
 Label(frame2,text="").grid(row=1,column=2)
 Label(frame2,text="").grid(row=1,column=4)
 Label(frame2,text="").grid(row=1,column=6)
+Label(frame2,text="").grid(row=1,column=8)
 
+#row=3 , showtxet
 
-#row=3 , showtxt
+def listToString(s): 
+    # Credit: https://www.geeksforgeeks.org/python-program-to-convert-a-list-to-string/
+    # initialize an empty string
+    str1 = ""
+ 
+    # traverse in the string
+    for ele in s:
+        str1 += ele
+ 
+    # return string
+    return str1
+
 def showText():
-    # Main Fuction
-    Label03 = Label(frame2,text="M/W",font=('arial', 20))
-    Label03.grid(row=1,column=7)
+    
+    # k-Nearest Neighbors Fuction
+    Neighbors = Neighbors_input.get()
+    Weight = Weight_input.get()
+    Height = Height_input.get()
+    Size = Size_input.get()
+    Age = Age_input.get()
 
+    fileDataset = 'Dataset_01.csv'
+    data = pd.read_csv(fileDataset)
 
+    # แปลงข้อมูลจากไฟล์ตัวอักษร เป็น ตัวเลข (0 = หญิง, 1 = ชาย)
+    # data['Gender'] = data.Gender.replace(['Women','Men'],[0,1])
+
+    x = data[['Height', 'Weight', 'Size', 'Age']]
+    y = data['Gender']
+    
+    # Set data between train and test
+    x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.7, random_state=10)
+   
+    # K max = 7 becase train_size = 0.7 in 1.0 (70% in 100%)
+
+    # print(x_test.count())
+    # Define K value, Set model between train and test
+    kNN_model = KNeighborsClassifier(n_neighbors=Neighbors)
+    kNN_model = kNN_model.fit(x_train, y_train)
+    kNNScore = kNN_model.score(x_test, y_test)
+    # print(kNNScore)
+
+    # Input data and Show Output
+    StartkNN = [ [Height,Weight,Size,Age]]
+    Sex = kNN_model.predict(StartkNN)
+    ShowSex = (listToString(Sex))
+    Label03 = Label(frame2,text=ShowSex,font=('arial', 20))
+    Label03.grid(row=1,column=9)
+    print(ShowSex)
+    # print(kNN_model.predict(StartkNN))
+    # Label03 = Label(frame2,text="M/W",font=('arial', 20))
+    # Label03.grid(row=1,column=7)
 
 def Del_txt():
-    mytxt.delete(0,END)
-    mytxt01.delete(0,END)
-    mytxt02.delete(0,END)
-    mytxt03.delete(0,END)
-
+    Neighbors_Entry.delete(0,END)
+    Height_Entry.delete(0,END)
+    Weight_Entry.delete(0,END)
+    Size_Entry.delete(0,END)
+    Age_Entry.delete(0,END)
+    Label03 = Label(frame2,text='               ',font=('arial', 20))
+    Label03.grid(row=1,column=9)
 
 
 #row=4
