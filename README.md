@@ -8,4 +8,4 @@ How to run this project with [PythonGUI](https://github.com/Kawin101/935306AI_kN
 Downlad https://www.python.org/downloads/release/python-31010/
 
 ## Import Library
-Open "Command Prompt: CMD". Run `pip3 install scikit-learn` | Run `pip3 install pandas` and Run `pip3 install tk`
+Open `Command Prompt on Windows OS`. Run `pip3 install scikit-learn` | Run `pip3 install pandas` and Run `pip3 install tk`
