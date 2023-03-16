@@ -35,7 +35,7 @@ Label(frame,text="").grid(row=0,column=11)
 
 
 #row=1
-Label(frame,text="1").grid(row=1,column=0)
+Label(frame,text="1",font=('arial', 20)).grid(row=1,column=0)
 Label(frame,text="").grid(row=1,column=1)
 Label(frame,text="120",font=('arial', 20)).grid(row=1,column=2)
 Label(frame,text="").grid(row=1,column=3)
