@@ -1,0 +1,5 @@
+Open "Command Prompt"
+Downlad https://www.python.org/downloads/release/python-31010/
+run "pip3 install scikit-learn"
+run "pip3 install pandas"
+run "pip3 install tk"

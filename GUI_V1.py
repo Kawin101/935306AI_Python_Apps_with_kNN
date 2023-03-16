@@ -198,7 +198,7 @@ Label(frame2,text="").grid(row=1,column=6)
 
 #row=3 , showtxt
 def showText():
-
+    # Main Fuction
     Label03 = Label(frame2,text="M/W",font=('arial', 20))
     Label03.grid(row=1,column=7)
 
