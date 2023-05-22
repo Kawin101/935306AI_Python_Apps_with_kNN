@@ -11,5 +11,5 @@ Downlad https://www.python.org/downloads/release/python-31010/
 Open `Command Prompt` on Windows OS. Run `pip3 install scikit-learn` | `pip3 install pandas` `pip3 install tk`.
 
 ## Developer
-Frontend: [https://github.com/Thidaratmatha05]
-Backend: [https://github.com/Kawin101]
+* Frontend: [https://github.com/Thidaratmatha05]
+* Backend: [https://github.com/Kawin101]
