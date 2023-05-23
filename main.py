@@ -34,6 +34,7 @@ class  guiHeader():
     Label(frame,text="").grid(row=0,column=9)
     Label(frame,text=" Sex ",bg = "white",font=('arial', 20,'bold')).grid(row=0,column=10)
     Label(frame,text="").grid(row=0,column=11)
+    print("gui header is done!")
 
 class guiBodyDataTable():
     print("gui body data in table is doing!")
@@ -167,6 +168,7 @@ class guiBodyDataTable():
     Label(frame,text="").grid(row=10,column=9)
     Label(frame,text="Man",font=('arial', 20)).grid(row=10,column=10)
     Label(frame,text="").grid(row=10,column=11)
+    print("gui body data in table is done!")
 
 frame2 = Frame(root,bd=3, height=10, width=10, relief=RIDGE, cursor="hand1" , highlightthickness=1)
 frame2.pack()
@@ -217,7 +219,7 @@ class guiFootHeader():
     Label(frame2,text="").grid(row=1,column=4)
     Label(frame2,text="").grid(row=1,column=6)
     Label(frame2,text="").grid(row=1,column=8)
-
+    print("gui foot header is done!")
     #row=3 , showtxet
 
 class mainFunction():
@@ -230,12 +232,19 @@ class mainFunction():
         # traverse in the string
         for ele in s:
             str1 += ele
-    
+
+        print("main fuction listToString method is work done!")
         # return string
         return str1
+        
 
     def showText():
         print("main fuction showText method is working!")
+
+        # Reset gui button display to default(null)!
+        guiFootHeader.Label03 = Label(frame2,text='               ',font=('arial', 20))
+        guiFootHeader.Label03.grid(row=1,column=9)
+
         # k-Nearest Neighbors Fuction
         Neighbors = guiFootHeader.Neighbors_input.get()
         Weight = guiFootHeader.Weight_input.get()
@@ -267,10 +276,19 @@ class mainFunction():
         # Input data and Show Output
         StartkNN = [ [Height,Weight,Size,Age]]
         Sex = kNN_model.predict(StartkNN)
+        # Covert data format text list to string, ['A','B','C', ...] to A, B, C, ...
         ShowSex = (mainFunction.listToString(Sex))
-        Label03 = Label(frame2,text=ShowSex,font=('arial', 20))
+        # Move data in Showsex to ShowSextoGui, ShowSex = Women -> ShowSextoGui's Women too!
+        ShowSextoGui = ShowSex
+        # Get display data on Gui
+        Label03 = Label(frame2,text=ShowSextoGui,font=('arial', 20))
         Label03.grid(row=1,column=9)
-        print(ShowSex)
+        print("main fuction showText method is work done!")
+        # print(ShowSex)
+
+        
+
+        return ShowSextoGui
         # print(kNN_model.predict(StartkNN))
         # Label03 = Label(frame2,text="M/W",font=('arial', 20))
         # Label03.grid(row=1,column=7)
@@ -284,12 +302,15 @@ class mainFunction():
         guiFootHeader.Age_Entry.delete(0,END)
         guiFootHeader.Label03 = Label(frame2,text='               ',font=('arial', 20))
         guiFootHeader.Label03.grid(row=1,column=9)
+        print("main fuction Del_txt method is work done!")
 
 class guiFootButton():
     print("gui foot button is doing!")
     #row=4
     showText = Button(frame2,text=' ทำนาย ', command=mainFunction.showText, bg="black",font=('arial', 15),fg="white").grid(row=3,column=3)
     Del_txt = Button(frame2,text=' ลบ ', command=mainFunction.Del_txt, bg="black",font=('arial', 15),fg="white").grid(row=3,column=5)
+    print("gui foot button is done!")
+
 
 #กำหนดขนาดหน้าต่าง พื้นหลังสีดำ
 root.configure(background='black')
