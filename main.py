@@ -285,9 +285,6 @@ class mainFunction():
         Label03.grid(row=1,column=9)
         print("main fuction showText method is work done!")
         # print(ShowSex)
-
-        
-
         return ShowSextoGui
         # print(kNN_model.predict(StartkNN))
         # Label03 = Label(frame2,text="M/W",font=('arial', 20))
