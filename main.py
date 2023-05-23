@@ -20,6 +20,9 @@ Label(bg="black").pack()
 frame = Frame(root,bd=3, height=10, width=10, relief=RIDGE, cursor="hand1" , highlightthickness=0)
 frame.pack()
 
+frame2 = Frame(root,bd=3, height=10, width=10, relief=RIDGE, cursor="hand1" , highlightthickness=1)
+frame2.pack()
+
 class  guiHeader(): 
     print("gui header is doing!")
     Label(frame,text=" K ",bg = "white",font=('arial', 20, 'bold')).grid(row=0,column=0)
@@ -170,9 +173,6 @@ class guiBodyDataTable():
     Label(frame,text="").grid(row=10,column=11)
     print("gui body data in table is done!")
 
-frame2 = Frame(root,bd=3, height=10, width=10, relief=RIDGE, cursor="hand1" , highlightthickness=1)
-frame2.pack()
-
 class guiFootHeader():
     print("gui foot header is doing!")
     #row=0
@@ -237,7 +237,6 @@ class mainFunction():
         # return string
         return str1
         
-
     def showText():
         print("main fuction showText method is working!")
 
@@ -307,7 +306,6 @@ class guiFootButton():
     showText = Button(frame2,text=' ทำนาย ', command=mainFunction.showText, bg="black",font=('arial', 15),fg="white").grid(row=3,column=3)
     Del_txt = Button(frame2,text=' ลบ ', command=mainFunction.Del_txt, bg="black",font=('arial', 15),fg="white").grid(row=3,column=5)
     print("gui foot button is done!")
-
 
 #กำหนดขนาดหน้าต่าง พื้นหลังสีดำ
 root.configure(background='black')
