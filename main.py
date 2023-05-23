@@ -10,10 +10,10 @@ import pandas as pd
 
 root =Tk()
 #ชื่อแอป
-root.title("Name Project: HSW Gender.")
+root.title("Project: HSW Gender App.")
 
 Label(bg="black").pack()
-Label(text="App HSW Gender.",font=('Tahoma', 25, 'bold'),fg="white",bg="black").pack()
+Label(text="HSW Gender App",font=('Tahoma', 25, 'bold'),fg="white",bg="black").pack()
 Label(text="เป็นแอปทำนายเพศของคุณ",font=('Tahoma', 20, 'bold'),fg="white",bg="black").pack()
 Label(bg="black").pack()
 
@@ -257,7 +257,8 @@ class mainFunction():
         # แปลงข้อมูลจากไฟล์ตัวอักษร เป็น ตัวเลข (0 = หญิง, 1 = ชาย)
         # data['Gender'] = data.Gender.replace(['Women','Men'],[0,1])
 
-        x = data[['Height', 'Weight', 'Size', 'Age']]
+        # How to fix error? Let's do follows this https://stackoverflow.com/questions/69326639/sklearn-warning-valid-feature-names-in-version-1-0
+        x = data[['Height', 'Weight', 'Size', 'Age']].values # conversion of X into array
         y = data['Gender']
         
         # Set data between train and test
