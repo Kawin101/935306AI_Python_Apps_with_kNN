@@ -8,6 +8,16 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
 import pandas as pd
 
+# Create a function to update the GUI with data from the CSV file
+def update_gui():
+    data = pd.read_csv('Dataset_01.csv')  # Load data from the CSV file
+
+    # Loop through the data and update the GUI elements
+    for index, row in data.iterrows():
+        row_data = [index + 1] + list(row)  # Extract row data
+        for col, value in enumerate(row_data):
+            Label(frame, text=value, font=('arial', 20)).grid(row=index + 1, column=col)
+
 root =Tk()
 #ชื่อแอป
 root.title("Project: HSW Gender App.")
@@ -308,7 +318,12 @@ class guiFootButton():
     Del_txt = Button(frame2,text=' ลบ ', command=mainFunction.Del_txt, bg="black",font=('arial', 15),fg="white").grid(row=3,column=5)
     print("gui foot button is done!")
 
-#กำหนดขนาดหน้าต่าง พื้นหลังสีดำ
+# Add a button to trigger the update
+update_button = Button(root, text="Update Data", command=update_gui)
+update_button.pack()
+
+# Configure the GUI and start the main loop
+# กำหนดขนาดหน้าต่าง พื้นหลังสีดำ
 root.configure(background='black')
 root.geometry("1400x700")
 root.mainloop()
