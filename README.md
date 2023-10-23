@@ -1,5 +1,5 @@
-# 935306AI_kNN-App_HSW-Gender
- k-Nearest Neighbors Application with Python
+# 935306AI_Python_Apps_with_kNN
+ Python GUI Apps with k-Nearest Neighbors
 
 # Guide
 How to run this project with [PythonGUI](https://github.com/Kawin101/935306AI_kNN-App_HSW-Gender/blob/main/main.py) version 1.0.2 (May 23, 2023)
